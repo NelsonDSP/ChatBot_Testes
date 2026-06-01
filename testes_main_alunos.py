@@ -25,17 +25,24 @@ class TestObterResposta(unittest.TestCase):
 
     def teste_historia_portugal(self):
         """Teste de respostas sobre história de Portugal - 1 teste"""
-
+        self.assertEqual(obter_resposta("quem foi o primeiro rei de Portugal?"), "D. Afonso Henriques foi o primeiro rei de Portugal!")
+    
     def teste_cozinhar(self):
         """Teste de respostas sobre cozinhar - 1 teste"""
+        self.assertEqual(obter_resposta("consegues-me dizer a receita dum bolo?"), "Claro! Aqui está uma receita simples de bolo de chocolate:\n\nIngredientes:\n- 200g de farinha\n- 200g de açúcar\n- 100g de cacau em pó\n- 1 colher de chá de fermento em pó\n- 1/2 colher de chá de bicarbonato de sódio\n- 1/2 colher de chá de sal\n- 2 ovos\n- 240ml de leite\n- 120ml de óleo vegetal\n- 2 colheres de chá de extrato de baunilha\n\nInstruções:\n1. Preaqueça o forno a 180°C e unte uma forma de bolo.\n2. Em uma tigela grande, misture a farinha, o açúcar, o cacau em pó, o fermento, o bicarbonato e o sal.\n3. Em outra tigela, bata os ovos, o leite, o óleo e a baunilha até ficar bem combinado.\n4. Adicione os ingredientes líquidos aos ingredientes secos e misture até ficar homogêneo.\n5. Despeje a massa na forma preparada e asse por cerca de 30-35 minutos ou até que um palito inserido no centro saia limpo.\n6. Deixe esfriar antes de desenformar e servir. Aproveite!")
 
     def teste_programar(self):
         """Teste de respostas sobre programar - 2 testes"""
+        self.assertEqual(obter_resposta("sabes programar python?"), "Sou um chatbot, mas posso ajudar-te com perguntas sobre Python!")
+        self.assertEqual(obter_resposta("sabes programar em c?"), "Sou um chatbot, mas posso ajudar-te com perguntas sobre C!")
 
     def teste_desenvolvimento(self):
         """Teste de respostas sobre desenvolvimento - 4 testes"""
         self.assertEqual(obter_resposta("desenvolvimento web"), "O desenvolvimento web envolve a criação de sites e aplicações web...")
-
+        self.assertEqual(obter_resposta("como posso começar a programar?"), "Para começar a programar, podes iniciar por aprender uma linguagem de programação como Python ou C.")
+        self.assertEqual(obter_resposta("como é que eu sei que linguagem devo aprender?"), "Podes começar por aprender Python, que é uma linguagem acessível para iniciantes.")
+        self.assertEqual(obter_resposta("é complicado programar?"), "Programar pode parecer complicado no início, mas com prática e paciência, torna-se mais fácil ao longo do tempo.")
+adeus
     def teste_ia(self):
         """Teste de respostas sobre inteligência artificial - 3 testes"""
         self.assertEqual(obter_resposta("ia"), "A inteligência artificial é um campo da ciência da computação que se concentra na criação de sistemas que podem realizar tarefas que normalmente requerem inteligência humana.")
