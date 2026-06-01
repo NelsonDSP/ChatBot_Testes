@@ -13,6 +13,9 @@ class TestObterResposta(unittest.TestCase):
     def teste_perguntas_simples(self):
         """Teste de respostas a perguntas simples - 4 testes"""
         self.assertEqual(obter_resposta("como estás"), "Estou bem, obrigado!")
+        self.assertEqual(obter_resposta("como te chamas"), "Chamo-me Bot!, prazer em conhecer-te!")
+        self.assertEqual(obter_resposta("qual a tua cor favorita"), "Lilás!")
+        self.assertEqual(obter_resposta("quando é que foste criado"), "01/06/2026 !")
 
     def teste_despedidas(self):
         """Teste de respostas a despedidas - 3 testes"""
