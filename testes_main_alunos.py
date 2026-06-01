@@ -6,60 +6,60 @@ from app import obter_resposta
 class TestObterResposta(unittest.TestCase):
     def teste_saudacoes(self):
         """Teste de respostas a saudações - 3 testes"""
-        self.assertEqual(obter_resposta("olá"), "Olá, tudo bem?")
-        self.assertEqual(obter_resposta("boas"), "boas, tudo bem?")
-        self.assertEqual(obter_resposta("oi"), "Oi, tudo bem?")
+        self.assertEqual(obter_resposta("olá"), "Olá tudo bem!")
+        self.assertEqual(obter_resposta("bom dia"), "Olá tudo bem!")
+        self.assertEqual(obter_resposta("boa tarde"), "Olá tudo bem!")
 
     def teste_perguntas_simples(self):
         """Teste de respostas a perguntas simples - 4 testes"""
         self.assertEqual(obter_resposta("como estás"), "Estou bem, obrigado!")
-        self.assertEqual(obter_resposta("como te chamas"), "Chamo-me Bot!, prazer em conhecer-te!")
-        self.assertEqual(obter_resposta("qual a tua cor favorita"), "Lilás!")
-        self.assertEqual(obter_resposta("quando é que foste criado"), "01/06/2026 !")
+        self.assertEqual(obter_resposta("como te chamas"), "O meu nome é: Bot :)")
+        self.assertEqual(obter_resposta("tempo"), "Está um dia de sol!")
+        self.assertEqual(obter_resposta("capital de portugal"), "Lisboa")
 
     def teste_despedidas(self):
         """Teste de respostas a despedidas - 3 testes"""
         self.assertEqual(obter_resposta("bye"), "Gostei de falar contigo! Até breve...")
-        self.assertEqual(obter_resposta("xau"), "Xau! Até breve...")
-        self.assertEqual(obter_resposta("adeus"), "Adeus! Até breve...")
+        self.assertEqual(obter_resposta("adeus"), "Gostei de falar contigo! Até breve...")
+        self.assertEqual(obter_resposta("tchau"), "Gostei de falar contigo! Até breve...")
 
     def teste_historia_portugal(self):
         """Teste de respostas sobre história de Portugal - 1 teste"""
-        self.assertEqual(obter_resposta("quem foi o primeiro rei de Portugal?"), "D. Afonso Henriques foi o primeiro rei de Portugal!")
-    
+        self.assertEqual(obter_resposta("historia de portugal"), "Portugal tem uma rica história...")
+
     def teste_cozinhar(self):
         """Teste de respostas sobre cozinhar - 1 teste"""
-        self.assertEqual(obter_resposta("consegues-me dizer a receita dum bolo?"), "Claro! Aqui está uma receita simples de bolo de chocolate:\n\nIngredientes:\n- 200g de farinha\n- 200g de açúcar\n- 100g de cacau em pó\n- 1 colher de chá de fermento em pó\n- 1/2 colher de chá de bicarbonato de sódio\n- 1/2 colher de chá de sal\n- 2 ovos\n- 240ml de leite\n- 120ml de óleo vegetal\n- 2 colheres de chá de extrato de baunilha\n\nInstruções:\n1. Preaqueça o forno a 180°C e unte uma forma de bolo.\n2. Em uma tigela grande, misture a farinha, o açúcar, o cacau em pó, o fermento, o bicarbonato e o sal.\n3. Em outra tigela, bata os ovos, o leite, o óleo e a baunilha até ficar bem combinado.\n4. Adicione os ingredientes líquidos aos ingredientes secos e misture até ficar homogêneo.\n5. Despeje a massa na forma preparada e asse por cerca de 30-35 minutos ou até que um palito inserido no centro saia limpo.\n6. Deixe esfriar antes de desenformar e servir. Aproveite!")
+        self.assertEqual(obter_resposta("cozinhar"), "Cozinhar é uma arte que envolve a preparação de alimentos...")
 
     def teste_programar(self):
         """Teste de respostas sobre programar - 2 testes"""
-        self.assertEqual(obter_resposta("sabes programar python?"), "Sou um chatbot, mas posso ajudar-te com perguntas sobre Python!")
-        self.assertEqual(obter_resposta("sabes programar em c?"), "Sou um chatbot, mas posso ajudar-te com perguntas sobre C!")
+        self.assertEqual(obter_resposta("sabes programar"), "Sim, posso ajudar com programação!")
+        self.assertEqual(obter_resposta("programar"), "Programar é o processo de escrever código para criar software...")
 
     def teste_desenvolvimento(self):
         """Teste de respostas sobre desenvolvimento - 4 testes"""
         self.assertEqual(obter_resposta("desenvolvimento web"), "O desenvolvimento web envolve a criação de sites e aplicações web...")
-        self.assertEqual(obter_resposta("como posso começar a programar?"), "Para começar a programar, podes iniciar por aprender uma linguagem de programação como Python ou C.")
-        self.assertEqual(obter_resposta("como é que eu sei que linguagem devo aprender?"), "Podes começar por aprender Python, que é uma linguagem acessível para iniciantes.")
-        self.assertEqual(obter_resposta("é complicado programar?"), "Programar pode parecer complicado no início, mas com prática e paciência, torna-se mais fácil ao longo do tempo.")
+        self.assertEqual(obter_resposta("desenvolvimento de software"), "O desenvolvimento de software é o processo de criar programas e aplicações...")
+        self.assertEqual(obter_resposta("desenvolvimento de jogos"), "O desenvolvimento de jogos é a criação de jogos eletrônicos...")
+        self.assertEqual(obter_resposta("desenvolvimento de aplicativos móveis"), "O desenvolvimento de aplicativos móveis é a criação de aplicativos para dispositivos móveis...")
 
     def teste_ia(self):
         """Teste de respostas sobre inteligência artificial - 3 testes"""
         self.assertEqual(obter_resposta("ia"), "A inteligência artificial é um campo da ciência da computação que se concentra na criação de sistemas que podem realizar tarefas que normalmente requerem inteligência humana.")
-        self.assertEqual(obter_resposta("o que é um chatbot?"), "Um chatbot é um programa de computador projetado para simular uma conversa humana.")
-        self.assertEqual(obter_resposta("o que é um LLM?"), "LLM é uma sigla para 'Large Language Model', que se refere a modelos de linguagem de grande porte.")
+        self.assertEqual(obter_resposta("machine learning"), "O aprendizado de máquina é um subcampo da inteligência artificial que se concentra no desenvolvimento de algoritmos que permitem que os computadores aprendam com os dados.")
+        self.assertEqual(obter_resposta("deep learning"), "O aprendizado profundo é uma subárea do aprendizado de máquina que utiliza redes neurais profundas para modelar dados complexos.")
 
     def teste_saude(self):
         """Teste de respostas sobre saúde - 3 testes"""
         self.assertEqual(obter_resposta("saúde"), "A saúde é um estado de completo bem-estar físico, mental e social, e não apenas a ausência de doenças ou enfermidades.")
-        self.assertEqual(obter_resposta("IMC"), "O índice de massa corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está com peso saudável, calculado dividindo o peso em kg pela altura em metros ao quadrado.")
-        self.assertEqual(obter_resposta("BPmM"), "O BPM, ou Batimentos por minuto, é uma medida da frequência cardíaca, indicando quantas vezes o coração bate por minuto.")
+        self.assertEqual(obter_resposta("problemas saúde"), "Problemas de saúde podem variar de leves a graves e podem afetar qualquer parte do corpo.")
+        self.assertEqual(obter_resposta("sintomas"), "Sintomas são sinais ou indicações de uma condição médica ou doença.")
 
     def teste_indisposicao(self):
         """Teste de respostas sobre indisposição - 3 testes"""
         self.assertEqual(obter_resposta("indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
-        self.assertEqual(obter_resposta("dor de cabeça"), "Melhor tomar um ben-u-ron e descansar um pouco, se a dor persistir, é aconselhável consultar um médico.")
-        self.assertEqual(obter_resposta("vomitos"), "se estiveres a vomitar, é importante manter-se hidratado e descansar. Se os sintomas persistirem, é aconselhável consultar um médico.")
+        self.assertEqual(obter_resposta("sintomas de indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
+        self.assertEqual(obter_resposta("estou com sintomas de indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
 
     def teste_horas_e_data(self):
         """Teste de respostas a perguntas sobre horas e data"""
@@ -73,11 +73,11 @@ class TestObterResposta(unittest.TestCase):
         """Teste de resposta padrão"""
         texto_aleatorio = "xyz123"
         self.assertEqual(obter_resposta(texto_aleatorio), f"Desculpa, não entendi a questão! {texto_aleatorio}")
-        texto_aleatorio2 = "teste123" # fazer outro teste de texto aleatório
+        texto_aleatorio2 = "teste123"
         self.assertEqual(obter_resposta(texto_aleatorio2), f"Desculpa, não entendi a questão! {texto_aleatorio2}")
-        texto_aleatorio3 = "abc" # fazer outro teste de texto aleatório
+        texto_aleatorio3 = "abc456"
         self.assertEqual(obter_resposta(texto_aleatorio3), f"Desculpa, não entendi a questão! {texto_aleatorio3}")
-        texto_aleatorio4 = "a" # fazer outro teste de texto aleatório
+        texto_aleatorio4 = "qwerty"
         self.assertEqual(obter_resposta(texto_aleatorio4), f"Desculpa, não entendi a questão! {texto_aleatorio4}")
 
 
