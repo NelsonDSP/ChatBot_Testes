@@ -61,5 +61,4 @@ class TestObterResposta(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-
 # para correr os testes: python -m unittest -v testes_main_alunos.py
