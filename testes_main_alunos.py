@@ -42,7 +42,7 @@ class TestObterResposta(unittest.TestCase):
         self.assertEqual(obter_resposta("como posso começar a programar?"), "Para começar a programar, podes iniciar por aprender uma linguagem de programação como Python ou C.")
         self.assertEqual(obter_resposta("como é que eu sei que linguagem devo aprender?"), "Podes começar por aprender Python, que é uma linguagem acessível para iniciantes.")
         self.assertEqual(obter_resposta("é complicado programar?"), "Programar pode parecer complicado no início, mas com prática e paciência, torna-se mais fácil ao longo do tempo.")
-adeus
+
     def teste_ia(self):
         """Teste de respostas sobre inteligência artificial - 3 testes"""
         self.assertEqual(obter_resposta("ia"), "A inteligência artificial é um campo da ciência da computação que se concentra na criação de sistemas que podem realizar tarefas que normalmente requerem inteligência humana.")
@@ -74,11 +74,15 @@ adeus
         texto_aleatorio = "xyz123"
         self.assertEqual(obter_resposta(texto_aleatorio), f"Desculpa, não entendi a questão! {texto_aleatorio}")
         texto_aleatorio2 = "teste123" # fazer outro teste de texto aleatório
-        texto_aleatorio3 = "indisposição" # fazer outro teste de texto aleatório
-        texto_aleatorio4 = "sintomas de indisposição" # fazer outro teste de texto aleatório
+        self.assertEqual(obter_resposta(texto_aleatorio2), f"Desculpa, não entendi a questão! {texto_aleatorio2}")
+        texto_aleatorio3 = "abc" # fazer outro teste de texto aleatório
+        self.assertEqual(obter_resposta(texto_aleatorio3), f"Desculpa, não entendi a questão! {texto_aleatorio3}")
+        texto_aleatorio4 = "a" # fazer outro teste de texto aleatório
+        self.assertEqual(obter_resposta(texto_aleatorio4), f"Desculpa, não entendi a questão! {texto_aleatorio4}")
 
 
 if __name__ == '__main__':
     unittest.main()
+
 
 # para correr os testes: python -m unittest -v testes_main_alunos.py
