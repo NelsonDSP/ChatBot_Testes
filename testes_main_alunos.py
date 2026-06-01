@@ -53,11 +53,13 @@ adeus
         """Teste de respostas sobre saúde - 3 testes"""
         self.assertEqual(obter_resposta("saúde"), "A saúde é um estado de completo bem-estar físico, mental e social, e não apenas a ausência de doenças ou enfermidades.")
         self.assertEqual(obter_resposta("IMC"), "O índice de massa corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está com peso saudável, calculado dividindo o peso em kg pela altura em metros ao quadrado.")
-        self.assertEqual(obter_resposta("dor de cabeça"), "Melhor tomar um ben-u-ron e descansar um pouco, se a dor persistir, é aconselhável consultar um médico.")
+        self.assertEqual(obter_resposta("BPmM"), "O BPM, ou Batimentos por minuto, é uma medida da frequência cardíaca, indicando quantas vezes o coração bate por minuto.")
 
     def teste_indisposicao(self):
         """Teste de respostas sobre indisposição - 3 testes"""
         self.assertEqual(obter_resposta("indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
+        self.assertEqual(obter_resposta("dor de cabeça"), "Melhor tomar um ben-u-ron e descansar um pouco, se a dor persistir, é aconselhável consultar um médico.")
+        self.assertEqual(obter_resposta("vomitos"), "se estiveres a vomitar, é importante manter-se hidratado e descansar. Se os sintomas persistirem, é aconselhável consultar um médico.")
 
     def teste_horas_e_data(self):
         """Teste de respostas a perguntas sobre horas e data"""
