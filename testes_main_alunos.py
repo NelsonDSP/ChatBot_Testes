@@ -20,6 +20,8 @@ class TestObterResposta(unittest.TestCase):
     def teste_despedidas(self):
         """Teste de respostas a despedidas - 3 testes"""
         self.assertEqual(obter_resposta("bye"), "Gostei de falar contigo! Até breve...")
+        self.assertEqual(obter_resposta("xau"), "Xau! Até breve...")
+        self.assertEqual(obter_resposta("adeus"), "Adeus! Até breve...")
 
     def teste_historia_portugal(self):
         """Teste de respostas sobre história de Portugal - 1 teste"""
