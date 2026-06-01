@@ -6,7 +6,9 @@ from app import obter_resposta
 class TestObterResposta(unittest.TestCase):
     def teste_saudacoes(self):
         """Teste de respostas a saudações - 3 testes"""
-        self.assertEqual(obter_resposta("olá"), "Olá tudo bem!")
+        self.assertEqual(obter_resposta("olá"), "Olá, tudo bem?")
+        self.assertEqual(obter_resposta("boas"), "boas, tudo bem?")
+        self.assertEqual(obter_resposta("oi"), "Oi, tudo bem?")
 
     def teste_perguntas_simples(self):
         """Teste de respostas a perguntas simples - 4 testes"""
