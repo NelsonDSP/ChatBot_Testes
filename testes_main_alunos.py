@@ -46,6 +46,8 @@ adeus
     def teste_ia(self):
         """Teste de respostas sobre inteligência artificial - 3 testes"""
         self.assertEqual(obter_resposta("ia"), "A inteligência artificial é um campo da ciência da computação que se concentra na criação de sistemas que podem realizar tarefas que normalmente requerem inteligência humana.")
+        self.assertEqual(obter_resposta("o que é um chatbot?"), "Um chatbot é um programa de computador projetado para simular uma conversa humana.")
+        self.assertEqual(obter_resposta("o que é um LLM?"), "LLM é uma sigla para 'Large Language Model', que se refere a modelos de linguagem de grande porte.")
 
     def teste_saude(self):
         """Teste de respostas sobre saúde - 3 testes"""
